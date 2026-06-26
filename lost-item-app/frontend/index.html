@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lost Item App</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+        }
+button {
+    background: #667eea;
+}
+
+li button {
+    background: red;
+    margin-top: 10px;
+}
+        h2 {
+            margin-top: 20px;
+        }
+
+        form {
+            background: white;
+            color: black;
+            padding: 20px;
+            margin: 20px auto;
+            width: 320px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        input, button {
+            margin: 8px;
+            padding: 10px;
+            width: 90%;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #5a67d8;
+        }
+
+        #search {
+            width: 250px;
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: white;
+            color: black;
+            margin: 10px auto;
+            padding: 12px;
+            width: 320px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>📦 Lost Item Register</h1>
+
+<form id="itemForm">
+    <input type="text" placeholder="Item Name" id="name" required>
+    <input type="text" placeholder="Description" id="desc">
+    <input type="text" placeholder="Location" id="location">
+    <input type="date" id="date">
+    <input type="text" placeholder="Contact" id="contact">
+    <button type="submit">Add Item</button>
+    
+</form>
+
+<h2>🔍 Search Items</h2>
+<input type="text" id="search" placeholder="Search..." onkeyup="searchItems()">
+
+<h2>📋 Lost Items</h2>
+<ul id="itemList"></ul>
+
+<script src="script.js"></script>
+
+</body>
+</html>
